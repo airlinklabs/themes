@@ -38,9 +38,11 @@ The URL is pinned to a commit so the index and its file URLs always match.
 Branch URLs can be cached by CDNs; after publishing changes, update the SHA in
 this URL. The admin page no longer has a store-source field.
 
-The store lists both themes as compact cards. Clicking a card opens a popup
-with a cover hero, selectable preview thumbnails and the full description, plus
-an **Install** button and a **GitHub** link to the source. Installing downloads every file listed in
+The store lists both themes as full-bleed cover cards with the details at the
+bottom and a check mark over the image when active. Clicking a card opens a
+centered popup with a hero preview, arrows, dots and small thumbnails for
+browsing images, and the description at the bottom, plus an **Install** button
+and a **GitHub** link to the source. Installing downloads every file listed in
 the index `files` map — `theme.json`, CSS, `info.json` and all preview images —
 and writes them into `frontend/public/themes/installed/<id>/`. Open the
 installed card and use **Use for light** or **Use for dark**; the active card
