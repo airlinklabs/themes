@@ -28,8 +28,11 @@ In panel v2, open **Admin → Settings → Themes** and set the community index
 source to the raw `themes.json` on this branch:
 
 ```
-https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/themes.json
+https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/themes.json
 ```
+
+jsDelivr is recommended because `raw.githubusercontent.com` can serve a cached
+index for a while after a branch is updated.
 
 The store will list both themes. Installing downloads `theme.json` and
 `theme.css` from the URLs in `themes.json` and writes them into
