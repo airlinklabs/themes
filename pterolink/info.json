@@ -1,0 +1,16 @@
+{
+  "name": "Pterolink",
+  "version": "1.0.0",
+  "author": "Manu4Dev",
+  "description": "The Pterodactyl look you already know, now for your Airlink panel.",
+  "longDescription": "Pterolink brings the familiar Pterodactyl look to Airlink, with a clean and modern design that anyone can feel at home with. If you have used Pterodactyl before, you will recognise the horizontal top bar, underline tabs and slate colours. New to Pterodactyl? No problem - Pterolink is intuitive and easy to use for everyone. And best of all, it is completely free.",
+  "images": [
+    "images/01-hero.png",
+    "images/02-dark-light.png",
+    "images/03-servers.png",
+    "images/04-login.png",
+    "images/05-mobile.png",
+    "images/06-admin.png"
+  ],
+  "updatedAt": "2026-11-22"
+}
