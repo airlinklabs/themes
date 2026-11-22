@@ -804,3 +804,28 @@ html.dark body div:has(> h1) > [data-server-status-container] { margin-left:10px
 }
 /* Edit links in lists (mobile cards too): secondary grey like View. */
 html.dark body #page-content#page-content :is(a[href*="/edit/"][class*="bg-blue-600"], a[href*="/edit/"] button[class*="bg-blue-600"]) { background:#3e4c59 !important; border:1px solid #52606d !important; color:#e4e7eb !important; box-shadow:none !important; }
+
+/* Theme store: details dialog keeps its size, uses theme card colours and buttons. */
+html.dark body #themeOverlay .ts-box { max-width:760px !important; background:#323f4b !important; border:1px solid #3e4c59 !important; border-radius:6px !important; box-shadow:0 20px 50px #0006 !important; color:#e4e7eb !important; }
+html.dark body #themeOverlay .ts-media { background:#1f2933 !important; }
+html.dark body #themeOverlay .ts-thumb { border-radius:3px !important; }
+html.dark body #themeOverlay .ts-thumb.on { outline:2px solid #4299e1 !important; outline-offset:1px; }
+html.dark body #themeOverlay :is(#dlgInstall,#dlgApply) { background:#3182ce !important; border:1px solid #3182ce !important; color:#fff !important; border-radius:3px !important; box-shadow:none !important; }
+html.dark body #themeOverlay :is(#dlgInstall,#dlgApply):hover { background:#2b6cb0 !important; border-color:#2b6cb0 !important; }
+html.dark body #themeOverlay #dlgGh { background:#3e4c59 !important; border:1px solid #52606d !important; color:#e4e7eb !important; border-radius:3px !important; }
+html.dark body #themeOverlay #dlgGh:hover { border-color:#7b8794 !important; }
+html.dark body #themeOverlay #dlgDesc, html.dark body #themeOverlay #dlgMeta { color:#9aa5b1 !important; }
+@media(min-width:1024px) { html.dark body #page-content #storeGrid { grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) !important; gap:16px !important; } }
+html.dark body #page-content #storeGrid > * { border-radius:4px !important; box-shadow:none !important; }
+/* Theme store image arrows: round, see-through dark buttons with a centred arrow (cards and details dialog). */
+html.dark body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav { width:30px !important; height:30px !important; min-width:30px !important; padding:0 !important; border:1px solid #ffffff26 !important; border-radius:999px !important; background:#1f2933b3 !important; color:#fff !important; box-shadow:0 2px 6px #0004 !important; filter:none !important; display:flex !important; align-items:center !important; justify-content:center !important; backdrop-filter:blur(4px); transition:opacity .15s ease, background-color .15s ease !important; }
+html.dark body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav:hover { background:#3182ce !important; border-color:#3182ce !important; }
+html.dark body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav svg { width:14px !important; height:14px !important; margin:0 !important; flex:none !important; }
+@media(max-width:1023px) { html.dark body main#page-content > div[class~="px-4"]:has(#storeGrid) > div[class~="px-4"] { padding-left:0 !important; padding-right:0 !important; } }
+html.dark body #page-content #storeGrid > * { background:#323f4b !important; border:1px solid #3e4c59 !important; }
+/* Mobile admin menu: calm card hover instead of solid blue. */
+html.dark body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"] { background:#323f4b !important; border:1px solid #3e4c59 !important; border-radius:4px !important; transition:background-color .15s ease, border-color .15s ease !important; }
+html.dark body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover, html.dark body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:active { background:#3e4c59 !important; border-color:#627d98 !important; }
+html.dark body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover p:first-child { color:#ffffff !important; }
+html.dark body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover > svg:last-child { color:#4299e1 !important; }
+@media(max-width:1023px) { html.dark body main > div[class~="px-4"]:has(#storeGrid) > div[class~="px-4"]:first-child { padding-top:0 !important; } }

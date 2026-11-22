@@ -803,3 +803,28 @@ html:not(.dark) body #page-content#page-content :is(a[href*="/edit/"][class*="bg
 /* Light mode mobile bottom bar: the current section is blue, not white on white. */
 html:not(.dark) body .mobile-bottom-nav .mobile-nav-link:is(.active,[class*="text-white"],[class~="text-neutral-900"],[aria-current]) { color:#2b6cb0 !important; }
 html:not(.dark) body #page-content#page-content :is(a.nav-link2.active, a.nav-link2[data-active="true"]) { color:#1e293b !important; }
+
+/* Theme store: details dialog keeps its size, uses theme card colours and buttons. */
+html:not(.dark) body #themeOverlay .ts-box { max-width:760px !important; background:#ffffff !important; border:1px solid #e2e8f0 !important; border-radius:6px !important; box-shadow:0 20px 50px #0006 !important; color:#1e293b !important; }
+html:not(.dark) body #themeOverlay .ts-media { background:#f1f5f9 !important; }
+html:not(.dark) body #themeOverlay .ts-thumb { border-radius:3px !important; }
+html:not(.dark) body #themeOverlay .ts-thumb.on { outline:2px solid #4299e1 !important; outline-offset:1px; }
+html:not(.dark) body #themeOverlay :is(#dlgInstall,#dlgApply) { background:#3182ce !important; border:1px solid #3182ce !important; color:#fff !important; border-radius:3px !important; box-shadow:none !important; }
+html:not(.dark) body #themeOverlay :is(#dlgInstall,#dlgApply):hover { background:#2b6cb0 !important; border-color:#2b6cb0 !important; }
+html:not(.dark) body #themeOverlay #dlgGh { background:#ffffff !important; border:1px solid #cbd5e1 !important; color:#1e293b !important; border-radius:3px !important; }
+html:not(.dark) body #themeOverlay #dlgGh:hover { border-color:#94a3b8 !important; }
+html:not(.dark) body #themeOverlay #dlgDesc, html:not(.dark) body #themeOverlay #dlgMeta { color:#52606d !important; }
+@media(min-width:1024px) { html:not(.dark) body #page-content #storeGrid { grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) !important; gap:16px !important; } }
+html:not(.dark) body #page-content #storeGrid > * { border-radius:4px !important; box-shadow:none !important; }
+/* Theme store image arrows: round, see-through dark buttons with a centred arrow (cards and details dialog). */
+html:not(.dark) body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav { width:30px !important; height:30px !important; min-width:30px !important; padding:0 !important; border:1px solid #ffffff26 !important; border-radius:999px !important; background:#1f2933b3 !important; color:#fff !important; box-shadow:0 2px 6px #0004 !important; filter:none !important; display:flex !important; align-items:center !important; justify-content:center !important; backdrop-filter:blur(4px); transition:opacity .15s ease, background-color .15s ease !important; }
+html:not(.dark) body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav:hover { background:#3182ce !important; border-color:#3182ce !important; }
+html:not(.dark) body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav svg { width:14px !important; height:14px !important; margin:0 !important; flex:none !important; }
+@media(max-width:1023px) { html:not(.dark) body main#page-content > div[class~="px-4"]:has(#storeGrid) > div[class~="px-4"] { padding-left:0 !important; padding-right:0 !important; } }
+html:not(.dark) body #page-content #storeGrid > * { background:#ffffff !important; border:1px solid #e2e8f0 !important; }
+/* Mobile admin menu: calm card hover instead of solid blue. */
+html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"] { background:#ffffff !important; border:1px solid #e2e8f0 !important; border-radius:4px !important; transition:background-color .15s ease, border-color .15s ease !important; }
+html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover, html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:active { background:#f8fafc !important; border-color:#94a3b8 !important; }
+html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover p:first-child { color:#0f172a !important; }
+html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover > svg:last-child { color:#4299e1 !important; }
+@media(max-width:1023px) { html:not(.dark) body main > div[class~="px-4"]:has(#storeGrid) > div[class~="px-4"]:first-child { padding-top:0 !important; } }
