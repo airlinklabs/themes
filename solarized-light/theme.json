@@ -1,0 +1,10 @@
+{
+  "id": "solarized-light",
+  "name": "Solarized Light",
+  "author": "Ethan Schoonover (palette), Airlink",
+  "version": "1.0.0",
+  "description": "The classic Solarized light palette, ported from panel v1. Use as the light theme.",
+  "mode": "light",
+  "css": "theme.css",
+  "source": "community"
+}

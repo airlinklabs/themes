@@ -1,0 +1,33 @@
+{
+  "updatedAt": "2026-11-22",
+  "source": "https://github.com/airlinklabs/themes/tree/panel-v2",
+  "note": "Community index for Airlink panel v2. Point the admin theme store at the raw URL of this file.",
+  "themes": [
+    {
+      "id": "solarized-light",
+      "name": "Solarized Light",
+      "author": "Ethan Schoonover (palette), Airlink",
+      "version": "1.0.0",
+      "description": "The classic Solarized light palette, ported from panel v1. Use as the light theme.",
+      "mode": "light",
+      "sourceUrl": "https://github.com/airlinklabs/themes/tree/panel-v2/solarized-light",
+      "files": {
+        "theme.json": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/solarized-light/theme.json",
+        "theme.css": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/solarized-light/theme.css"
+      }
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight",
+      "author": "Airlink Community",
+      "version": "1.0.0",
+      "description": "A deep blue community theme with slate accents. Use as the dark theme.",
+      "mode": "dark",
+      "sourceUrl": "https://github.com/airlinklabs/themes/tree/panel-v2/midnight",
+      "files": {
+        "theme.json": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/midnight/theme.json",
+        "theme.css": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/midnight/theme.css"
+      }
+    }
+  ]
+}

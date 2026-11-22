@@ -1,0 +1,126 @@
+/*
+ * Midnight — example community theme for the v2 theme store.
+ * Uses the same --theme-* contract as the v1 built-in themes, so it can restyle
+ * the classic Tailwind markup without changing a single component.
+ */
+:root {
+  --theme-bg: #0b1220;
+  --theme-bg-secondary: #111c2f;
+  --theme-bg-tertiary: #16243b;
+  --theme-bg-card: #142139;
+  --theme-bg-hover: #1b2d4a;
+  --theme-bg-input: #0e1829;
+  --theme-bg-active-nav: rgba(96, 165, 250, 0.12);
+
+  --theme-border: #233355;
+  --theme-border-subtle: rgba(148, 163, 184, 0.12);
+  --theme-border-input: #2b3f63;
+  --theme-border-accent: rgba(96, 165, 250, 0.35);
+
+  --theme-text: #cbd5e1;
+  --theme-text-strong: #f8fafc;
+  --theme-text-muted: #94a3b8;
+  --theme-text-nav: #94a3b8;
+  --theme-text-nav-active: #f8fafc;
+  --theme-text-placeholder: #64748b;
+  --theme-text-code: #7dd3fc;
+  --theme-text-link: #60a5fa;
+
+  --theme-accent: #3b82f6;
+  --theme-accent-hover: #2563eb;
+  --theme-accent-text: #0b1220;
+  --theme-accent-subtle: rgba(59, 130, 246, 0.15);
+
+  --theme-success: #34d399;
+  --theme-success-bg: rgba(52, 211, 153, 0.12);
+  --theme-warning: #fbbf24;
+  --theme-warning-bg: rgba(251, 191, 36, 0.12);
+  --theme-danger: #f87171;
+  --theme-danger-bg: rgba(248, 113, 113, 0.12);
+  --theme-info: #38bdf8;
+  --theme-info-bg: rgba(56, 189, 248, 0.12);
+
+  --theme-nav-bg: #0e1829;
+  --theme-nav-border: #233355;
+  --theme-nav-text: #94a3b8;
+  --theme-nav-text-active: #f8fafc;
+  --theme-nav-icon: #64748b;
+  --theme-nav-icon-active: #60a5fa;
+
+  --theme-table-header-bg: #111c2f;
+  --theme-table-row-hover: rgba(96, 165, 250, 0.06);
+  --theme-table-divide: #1e2d49;
+
+  --theme-badge-neutral-bg: rgba(148, 163, 184, 0.12);
+  --theme-badge-neutral-text: #cbd5e1;
+  --theme-badge-blue-bg: rgba(96, 165, 250, 0.15);
+  --theme-badge-blue-text: #93c5fd;
+
+  --theme-btn-secondary-bg: #16243b;
+  --theme-btn-secondary-border: #2b3f63;
+  --theme-btn-secondary-text: #cbd5e1;
+  --theme-btn-secondary-hover: #1b2d4a;
+
+  --theme-toggle-track: #2b3f63;
+  --theme-toggle-dot: #93c5fd;
+
+  --theme-search-bg: #0e1829;
+  --theme-search-border: #233355;
+  --theme-search-text: #cbd5e1;
+  --theme-search-results: #111c2f;
+
+  --theme-scrollbar-track: #0b1220;
+  --theme-scrollbar-thumb: #2b3f63;
+  --theme-logo-bg: rgba(96, 165, 250, 0.08);
+  --theme-code-bg: #0e1829;
+  --theme-code-text: #7dd3fc;
+  --theme-code-border: #233355;
+}
+
+body {
+  background-color: var(--theme-bg) !important;
+  color: var(--theme-text) !important;
+}
+
+.bg-white,
+[class*="bg-neutral-50"],
+[class*="bg-neutral-100"] {
+  background-color: var(--theme-bg-secondary) !important;
+}
+
+[class*="bg-neutral-200"],
+[class*="dark:bg-neutral-8"] {
+  background-color: var(--theme-bg-card) !important;
+}
+
+[class*="border-neutral"],
+[class*="dark:border-"] {
+  border-color: var(--theme-border) !important;
+}
+
+.text-neutral-900,
+.dark\:text-white,
+.text-neutral-800 {
+  color: var(--theme-text-strong) !important;
+}
+
+.text-neutral-500,
+.dark\:text-neutral-400,
+.text-neutral-600 {
+  color: var(--theme-text-muted) !important;
+}
+
+#pc-sidebar,
+#pc-sidebar2 {
+  background-color: var(--theme-nav-bg) !important;
+  border-color: var(--theme-nav-border) !important;
+}
+
+.nav-link {
+  color: var(--theme-nav-text) !important;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--theme-nav-text-active) !important;
+  background-color: var(--theme-bg-active-nav) !important;
+}

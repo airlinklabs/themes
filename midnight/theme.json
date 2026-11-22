@@ -1,0 +1,10 @@
+{
+  "id": "midnight",
+  "name": "Midnight",
+  "author": "Airlink Community",
+  "version": "1.0.0",
+  "description": "A deep blue community theme with slate accents. Use as the dark theme.",
+  "mode": "dark",
+  "css": "theme.css",
+  "source": "community"
+}
