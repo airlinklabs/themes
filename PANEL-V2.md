@@ -5,10 +5,14 @@ branch keeps the original panel v1 themes (`pterolink/`).
 
 ## Packages
 
-| Theme | Mode | Directory |
-| --- | --- | --- |
-| Solarized Light | light | [`solarized-light/`](solarized-light/) |
-| Midnight | dark | [`midnight/`](midnight/) |
+| Theme | Mode | Package | CSS source |
+| --- | --- | --- | --- |
+| Pterolink Light | light | [`pterolink-light/`](pterolink-light/) | [`pterolink/light.css`](pterolink/light.css) |
+| Midnight | dark | [`midnight/`](midnight/) | [`midnight/theme.css`](midnight/theme.css) |
+
+`Pterolink Light` reuses the existing v1 stylesheet from `pterolink/light.css`
+through the index `files` map, so no CSS is duplicated. When installed it is
+written to `installed/pterolink-light/theme.css`.
 
 Each directory follows the v2 package format:
 

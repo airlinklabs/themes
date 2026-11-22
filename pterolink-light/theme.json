@@ -1,0 +1,10 @@
+{
+  "id": "pterolink-light",
+  "name": "Pterolink Light",
+  "author": "Manu4Dev",
+  "version": "1.0.1",
+  "description": "The familiar Pterodactyl-inspired light look, packaged for panel v2. Use as the light theme.",
+  "mode": "light",
+  "css": "theme.css",
+  "source": "community"
+}
