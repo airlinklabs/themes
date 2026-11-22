@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-22",
   "source": "https://github.com/airlinklabs/themes/tree/panel-v2",
-  "note": "Community index for Airlink panel v2. Point the admin theme store at this jsDelivr URL; each entry lists theme.json, theme.css, info.json and every preview image.",
+  "note": "Community index for Airlink panel v2. Point the admin theme store at the commit-pinned jsDelivr URL in PANEL-V2.md; each entry lists theme.json, theme.css, info.json and every preview image.",
   "themes": [
     {
       "id": "pterolink-light",

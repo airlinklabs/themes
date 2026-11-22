@@ -30,11 +30,12 @@ In panel v2, open **Admin → Settings → Themes** and set the community index
 source to the raw `themes.json` on this branch:
 
 ```
-https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/themes.json
+https://cdn.jsdelivr.net/gh/airlinklabs/themes@c2a922c/themes.json
 ```
 
-jsDelivr is recommended because `raw.githubusercontent.com` can serve a cached
-index for a while after a branch is updated.
+The URL is pinned to a commit so the index and its file URLs always match.
+Branch URLs can be cached by CDNs; after publishing changes, update the SHA in
+this URL and in the panel's store source field.
 
 The store lists both themes as image tiles. Clicking a tile opens a popup with
 the preview gallery, full description and an **Install** button plus a
