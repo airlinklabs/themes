@@ -1,194 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap");
-/* Pterolink: a Pterodactyl-inspired Airlink theme. */
-/*
- * Example Theme — Dark Mode
- *
- * This file shows every CSS variable the panel theming system supports.
- * Copy this file, change the values, and point your theme's info.json at it.
- *
- * Only override what you need — any variable you leave out falls back to
- * the panel's built-in defaults.
- *
- * HOW THE SYSTEM WORKS
- * --------------------
- * The panel has two CSS classes that control mode: no class = light,
- * `html:not(.dark)` = dark. Your dark.css is loaded when the user is in dark mode
- * and your light.css is loaded in light mode. Inside each file you define
- * CSS variables on :root and selectors that reference them.
- *
- * The panel's nav chrome (sidebar, mobile top bar, bottom nav) reads from
- * the variables below via the .mobile-top-bar, .mobile-bottom-nav,
- * #pc-sidebar, and #pc-sidebar2 selectors. Your variables flow through
- * automatically as long as you define them on :root.
- */
 
 :root {
-  /* ------------------------------------------------------------------ */
-  /* PAGE BACKGROUNDS                                                     */
-  /* ------------------------------------------------------------------ */
-
-  /* Main page background — the base canvas */
   --theme-bg: #f1f5f9;
-
-  /* Slightly lighter surface — used for sidebar, mobile bars, some cards */
   --theme-bg-secondary: #ffffff;
-
-  /* Third-level depth — nested cards, hover states */
   --theme-bg-tertiary: #e2e8f0;
-
-  /* Card / panel background */
   --theme-bg-card: #ffffff;
-
-  /* Background when something is hovered */
   --theme-bg-hover: #e2e8f0;
-
-  /* Input field background */
   --theme-bg-input: #f1f5f9;
-
-  /* Active nav item fill (usually semi-transparent) */
   --theme-bg-active-nav: #e2e8f0;
-
-
-  /* ------------------------------------------------------------------ */
-  /* BORDERS                                                              */
-  /* ------------------------------------------------------------------ */
-
-  /* Standard border — used on cards, inputs, separators */
   --theme-border: #d1dbe6;
-
-  /* Very subtle border — sidebar inner dividers, barely-there lines */
   --theme-border-subtle: #e2e8f0;
-
-  /* Input field border */
   --theme-border-input: #b8c7d6;
-
-
-  /* ------------------------------------------------------------------ */
-  /* TEXT                                                                 */
-  /* ------------------------------------------------------------------ */
-
-  /* Default body text */
   --theme-text: #334155;
-
-  /* Bold / heading text — highest contrast */
   --theme-text-strong: #142536;
-
-  /* Subdued text — captions, metadata, secondary labels */
   --theme-text-muted: #5b7086;
-
-  /* Nav link text in the resting (non-active) state */
   --theme-text-nav: #526477;
-
-  /* Nav link text when active or hovered */
   --theme-text-nav-active: #ffffff;
-
-  /* Placeholder text inside inputs */
   --theme-text-placeholder: #64748b;
-
-
-  /* ------------------------------------------------------------------ */
-  /* ACCENT / BRAND                                                       */
-  /* ------------------------------------------------------------------ */
-
-  /* Primary accent colour — buttons, links, active highlights */
   --theme-accent: #3b82f6;
-
-  /* Accent on hover */
   --theme-accent-hover: #2563eb;
-
-  /* Text that sits on top of the accent background */
   --theme-accent-text: #ffffff;
-
-
-  /* ------------------------------------------------------------------ */
-  /* STATUS COLOURS                                                       */
-  /* ------------------------------------------------------------------ */
-
-  /* Success / online / running */
   --theme-success: #48bb78;
-
-  /* Warning / starting / pending */
   --theme-warning: #ecc94b;
-
-  /* Danger / error / stopped / offline */
   --theme-danger: #f56565;
-
-  /* Info / neutral status */
   --theme-info: #4299e1;
-
-
-  /* ------------------------------------------------------------------ */
-  /* NAV CHROME                                                           */
-  /* Applies to: desktop sidebar, mobile top bar, mobile bottom nav       */
-  /* ------------------------------------------------------------------ */
-
-  /* Background of the sidebar and mobile nav bars */
   --theme-nav-bg: #e8eef5;
-
-  /* Border between nav chrome and page content */
   --theme-nav-border: #ffffff;
-
-  /* Nav icon and link text at rest */
   --theme-nav-text: #526477;
-
-  /* Nav icon and link text when active or focused */
   --theme-nav-text-active: #ffffff;
-
-  /* Nav icon colour specifically (if you want icons a different shade) */
   --theme-nav-icon: #9fb3c8;
-
-
-  /* ------------------------------------------------------------------ */
-  /* THEME TOGGLE SWITCH                                                  */
-  /* ------------------------------------------------------------------ */
-
-  /* The track the dot slides along */
   --theme-toggle-track: #b8c7d6;
-
-  /* The sliding dot itself */
   --theme-toggle-dot: #25364a;
-
-
-  /* ------------------------------------------------------------------ */
-  /* SEARCH                                                               */
-  /* ------------------------------------------------------------------ */
-
-  /* Search input background */
   --theme-search-bg: #f1f5f9;
-
-  /* Search input border */
   --theme-search-border: #b8c7d6;
-
-  /* Search input text */
   --theme-search-text: #25364a;
-
-  /* Search results dropdown background */
   --theme-search-results: #ffffff;
-
-
-  /* ------------------------------------------------------------------ */
-  /* SCROLLBAR                                                            */
-  /* Hidden by default in the panel. These apply if a browser shows one. */
-  /* ------------------------------------------------------------------ */
-
   --theme-scrollbar-track: #f1f5f9;
   --theme-scrollbar-thumb: #b8c7d6;
-
-
-  /* ------------------------------------------------------------------ */
-  /* LOGO BACKGROUND                                                      */
-  /* The small box behind the panel logo image in the nav                 */
-  /* ------------------------------------------------------------------ */
-
   --theme-logo-bg:          transparent;
 }
-
-
-/* ------------------------------------------------------------------ */
-/* SELECTORS                                                            */
-/* You do not need to change these — they wire the variables above      */
-/* to the actual elements in the panel. Edit variables, not selectors.  */
-/* ------------------------------------------------------------------ */
 
 html:not(.dark) body {
   background-color: var(--theme-bg) !important;
@@ -288,7 +138,6 @@ html:not(.dark) :is(button,a,input,select,textarea):focus-visible { outline: 2px
 html:not(.dark) [class*="bg-white"][class*="text-black"], html:not(.dark) [class*="bg-indigo-"], html:not(.dark) [class~="bg-blue-600"] { background-color: #3b82f6 !important; color: #fff !important; }
 html:not(.dark) ::selection { background: #3182ce; color: #fff; }
 
-/* Pterodactyl-style horizontal chrome and server rows */
 html:not(.dark) .btn-primary, html:not(.dark) a[href*="create-server"] { background:#3182ce !important; color:#fff !important; border-radius:3px !important; padding:10px 18px !important; }
 html:not(.dark) #page-content { background:#f1f5f9 !important; }
 html:not(.dark) div#page-content > div { max-width:1120px; margin:0 auto; padding:36px 32px !important; }
@@ -327,7 +176,7 @@ html:not(.dark) .view-toggle-btn { border-radius:3px !important; }
  html:not(.dark) #sidebar-logout-link { order:4; margin:0 !important; padding:0 !important; border:0 !important; font-size:12px; flex:none; }
  html:not(.dark) #page-content { padding-top:116px !important; width:100%; }
  html:not(.dark) main:has(#pc-sidebar) #searchInput { font-size:12px; }
- 
+
 }
 @media(max-width:700px) {
  html:not(.dark) .server-card > a { grid-template-columns:1fr; gap:16px; }
@@ -363,7 +212,6 @@ html:not(.dark) #page-content:has(#server-page-body) > div:nth-child(2) nav { bo
 html:not(.dark) #page-content:has(#server-page-body) > div:nth-child(2) a { display:inline-flex; padding:16px 18px !important; border-radius:0 !important; background:transparent !important; border-bottom:3px solid transparent; }
 html:not(.dark) #page-content:has(#server-page-body) > div:nth-child(2) a.active { color:#fff !important; border-bottom-color:#4299e1 !important; }
 
-/* Responsive repair: explicit search wrappers, independent mobile chrome. */
 @media(min-width:1024px) {
  html:not(.dark) div.fixed:has(#searchInput) { top:64px !important; left:0 !important; right:0 !important; width:auto !important; height:56px !important; padding:0 max(32px,calc((100vw - 1056px)/2)) !important; background:#e8eef5 !important; backdrop-filter:none !important; border-bottom:1px solid #e2e8f0 !important; }
  html:not(.dark) div:has(> #searchInput) { width:360px !important; max-width:100% !important; height:36px !important; margin:0 !important; padding:0 12px !important; background:#f1f5f9 !important; border:1px solid #b8c7d6 !important; border-radius:4px !important; }
@@ -416,7 +264,6 @@ html:not(.dark) .search-result:hover, html:not(.dark) .search-result:focus, html
 html:not(.dark) mark { background:#3182ce !important; color:#fff !important; border-radius:2px !important; }
 html:not(.dark) input:focus-visible { outline:none !important; box-shadow:0 0 0 2px #4299e1 !important; }
 
-/* Shared controls, tables, dialogs and editable surfaces. */
 html:not(.dark) :is(.dialog-box,.modal-box,.folder-popup,#globalModalPanel,#editApiKeyModalPanel,.server-ctx-menu,[role="dialog"]) { background:#ffffff !important; color:#334155 !important; border:1px solid #b8c7d6 !important; border-radius:4px !important; box-shadow:0 12px 30px #0006 !important; }
 html:not(.dark) :is(.dialog-box,.modal-box,.folder-popup,[role="dialog"]) { max-width:calc(100vw - 32px); max-height:calc(100dvh - 48px); overflow-y:auto; }
 html:not(.dark) :is(.dialog-overlay,.modal-overlay,.folder-popup-overlay) { background:rgba(12,20,28,.75) !important; backdrop-filter:none !important; }
@@ -449,7 +296,6 @@ html:not(.dark) .nav-link2.active, html:not(.dark) .nav-link2[data-active="true"
 html:not(.dark) :is(.dialog-box,.modal-box) .text-neutral-500, html:not(.dark) #page-content .text-neutral-500 { color:#64748b !important; }
 @media(max-width:700px) { html:not(.dark) :is(#createServerForm,#userForm) > [class*="grid-cols-"] { grid-template-columns:1fr !important; } html:not(.dark) :is(#createServerForm,#userForm) .col-span-2 { grid-column:auto !important; } html:not(.dark) .modal-box .grid-cols-2 { grid-template-columns:1fr !important; } html:not(.dark) .modal-box .col-span-2 { grid-column:auto !important; } }
 
-/* Authentication: centered Pterodactyl-style form, no split wallpaper. */
 html:not(.dark) body:has(.auth-split) { background:#f1f5f9 !important; padding:0 !important; }
 html:not(.dark) .auth-split { min-height:100dvh !important; width:100% !important; display:flex !important; align-items:center !important; justify-content:center !important; padding:40px 20px !important; background:#f1f5f9 !important; }
 html:not(.dark) .auth-image { display:none !important; }
@@ -476,7 +322,6 @@ html:not(.dark) #authPanel .pw-toggle { top:50% !important; transform:translateY
 html:not(.dark) body #page-content :is(div,section,article,tr)[class*="dark:bg-neutral-8"], html:not(.dark) body #page-content :is(div,section,article,tr)[class*="dark:bg-neutral-9"] { background:#ffffff !important; }
 html:not(.dark) body #sidebar-logout-link { background:transparent !important; color:#526477 !important; }
 
-/* Final component states and responsive form layout. */
 html:not(.dark) body #page-content > div { padding-top:20px !important; padding-bottom:20px !important; }
 html:not(.dark) body #page-content > div:first-child { padding-top:28px !important; padding-bottom:12px !important; }
 html:not(.dark) body #page-content:has(#server-page-body) > div:nth-child(2) { padding-top:0 !important; padding-bottom:0 !important; }
@@ -516,7 +361,6 @@ html:not(.dark) body ::selection { background:#3182ce !important; color:#fff !im
 }
 @media(prefers-reduced-motion:reduce) { html:not(.dark) *, html:not(.dark) *::before, html:not(.dark) *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
 
-/* Revision: compact server rows, restrained selection, one control system. */
 html:not(.dark) body #page-content #gridView { gap:10px !important; }
 html:not(.dark) body #page-content .server-card { background:#ffffff !important; border:1px solid #e2e8f0 !important; border-left:1px solid #e2e8f0 !important; box-shadow:none !important; border-radius:3px !important; padding:18px 20px !important; transform:none !important; }
 html:not(.dark) body #page-content .server-card:hover { background:#ffffff !important; border-color:#71869b !important; transform:none !important; }
@@ -559,7 +403,6 @@ html:not(.dark) body #page-content #startButton { background:#3182ce !important;
 
 html:not(.dark) body #page-content button[class~="w-7"][class~="h-7"], html:not(.dark) body #page-content button[class~="p-1.5"], html:not(.dark) body #page-content #copy-ip-btn { width:34px !important; height:34px !important; min-width:34px !important; padding:7px !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; }
 
-/* Header alignment: logo, navigation, and account avatar. */
 @media(min-width:1024px) {
  html:not(.dark) body #pc-sidebar2 > div:first-child { height:64px !important; display:flex !important; align-items:center !important; justify-content:center !important; align-self:stretch !important; padding:0 !important; margin:0 !important; }
  html:not(.dark) body #pc-sidebar2 > div:first-child > a { display:flex !important; align-items:center !important; justify-content:center !important; height:64px !important; gap:10px !important; padding:0 !important; margin:0 !important; }
@@ -577,7 +420,6 @@ html:not(.dark) body #topbar-default a[href*="/account"] img { display:block; wi
 html:not(.dark) body #topbar-default > a:first-child { align-items:center !important; }
 html:not(.dark) body #topbar-default > a:first-child img { width:36px !important; height:36px !important; padding:0 !important; object-fit:contain; background:transparent !important; }
 
-/* Responsive shell and centered content */
 @media(min-width:1024px) {
  html:not(.dark) body #pc-sidebar2 { gap:12px !important; padding:0 max(24px,calc((100vw - 1440px)/2)) !important; }
  html:not(.dark) body #pc-sidebar2 > div:first-child { flex-shrink:0 !important; }
@@ -598,7 +440,7 @@ html:not(.dark) body #topbar-default > a:first-child img { width:36px !important
  html:not(.dark) body #pc-sidebar2 > div:first-child h1 { font-size:18px !important; }
  html:not(.dark) body #pc-sidebar2 > div:first-child img { width:34px !important; height:34px !important; }
 }
-/* Quiet, correctly positioned loading state */
+
 html:not(.dark) body #pl-overlay { left:0 !important; right:0 !important; top:120px !important; bottom:0 !important; background:#f1f5f9 !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; box-shadow:none !important; }
 html:not(.dark) body:has(.auth-split) #pl-overlay { top:0 !important; }
 html:not(.dark) body #pl-inner { margin:auto !important; padding:24px !important; transform:none !important; animation:none !important; text-align:center; }
@@ -608,7 +450,6 @@ html:not(.dark) body #pl-bar { background:#4299e1 !important; height:3px !import
 html:not(.dark) body #page-content > *, html:not(.dark) body #server-page-body > *, html:not(.dark) body .server-card, html:not(.dark) body .stats-card { transform:none !important; animation:none !important; transition:opacity .15s ease !important; }
 @media(max-width:1023px) { html:not(.dark) body #pl-overlay { top:56px !important; bottom:64px !important; } html:not(.dark) body:has(.auth-split) #pl-overlay { top:0 !important; bottom:0 !important; } }
 
-/* Visible, accessible sun/moon control */
 body #theme-toggle { display:inline-flex !important; align-items:center !important; justify-content:center !important; width:36px !important; height:36px !important; min-width:36px !important; padding:0 !important; border:1px solid #627d98 !important; border-radius:6px !important; background:#3e4c59 !important; box-shadow:none !important; opacity:1 !important; cursor:pointer; overflow:hidden; }
 body #theme-toggle .dot { display:none !important; }
 body #theme-toggle::before { content:""; width:19px; height:19px; display:block; background:center/19px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e4e7eb' stroke-width='1.7' stroke-linecap='round'%3E%3Cpath d='M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z'/%3E%3C/svg%3E"); }
@@ -624,7 +465,6 @@ html:not(.dark) body #authPanel .auth-label { color:#52606d !important; }
 
 html:not(.dark) body #pc-sidebar2 > div:first-child img, html:not(.dark) body #topbar-default > a:first-child img, html:not(.dark) body #authPanel > div:first-child img { background:#323f4b !important; padding:5px !important; border-radius:4px !important; }
 
-/* Consistent checkbox switches: state-driven track and centered thumb. */
 body label:has(> input.peer[type="checkbox"]) { position:relative !important; display:inline-block !important; vertical-align:middle; width:42px !important; min-width:42px !important; height:24px !important; flex:0 0 42px; padding:0 !important; border:0 !important; border-radius:999px !important; }
 body label > input.peer[type="checkbox"] + :is(div,span) { position:relative !important; display:block !important; width:42px !important; height:24px !important; padding:0 !important; border:1px solid #627d98 !important; border-radius:999px !important; background:#52606d !important; box-shadow:none !important; transition:background-color .16s ease,border-color .16s ease !important; }
 body label > input.peer[type="checkbox"] + :is(div,span)::after { content:"" !important; position:absolute !important; inset:auto !important; top:2px !important; left:2px !important; width:18px !important; height:18px !important; border:0 !important; border-radius:50% !important; background:#fff !important; box-shadow:0 1px 2px #0003 !important; transform:translateX(0) !important; transition:transform .16s ease !important; }
@@ -637,7 +477,6 @@ html:not(.dark) body label > input.peer[type="checkbox"]:not(:checked) + :is(div
 
 body label > input.peer[type="checkbox"] + :is(div,span)::after { translate:none !important; rotate:none !important; scale:none !important; animation:none !important; }
 
-/* Borderless table sections, level nav items, content aligned with the search bar. */
 html:not(.dark) body #page-content > div.overflow-x-auto, html:not(.dark) body #page-content > div[class*="m-8"][class~="border"] { border:0 !important; box-shadow:none !important; background:transparent !important; border-radius:0 !important; }
 @media(min-width:1024px) {
  html:not(.dark) body #pc-sidebar2 nav ul > li { margin-top:0 !important; margin-bottom:0 !important; }
@@ -645,7 +484,6 @@ html:not(.dark) body #page-content > div.overflow-x-auto, html:not(.dark) body #
  html:not(.dark) body div#page-content { padding-left:0 !important; padding-right:0 !important; }
 }
 
-/* Grid view: real tiles (several per row, stats underneath, status-coloured top edge) so it differs from list view. */
 @media(min-width:768px) {
  html:not(.dark) body #page-content #gridView { display:grid !important; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) !important; gap:16px !important; }
  html:not(.dark) body #page-content #gridView.hidden { display:none !important; }
@@ -666,14 +504,12 @@ html:not(.dark) body #page-content > div.overflow-x-auto, html:not(.dark) body #
  html:not(.dark) body #page-content #gridView .server-card > a > div:nth-child(2) p:last-child { font-size:15px !important; font-weight:500 !important; }
 }
 
-/* Settings / Analytics tabs: underline tabs; the selected tab is bright with an accent underline. */
 html:not(.dark) body #page-content#page-content div:has(> .tab-btn) { display:flex !important; gap:4px !important; border:0 !important; border-bottom:1px solid #e2e8f0 !important; background:transparent !important; padding:0 !important; }
 html:not(.dark) body #page-content#page-content button.tab-btn { background:transparent !important; border:0 !important; border-bottom:2px solid transparent !important; border-radius:0 !important; box-shadow:none !important; margin:0 0 -1px !important; padding:10px 16px !important; height:auto !important; font-size:14px !important; font-weight:500 !important; color:#64748b !important; transition:color .15s ease, border-color .15s ease, background-color .15s ease !important; }
 html:not(.dark) body #page-content#page-content button.tab-btn:hover { color:#1e293b !important; background:#0f172a08 !important; border-bottom-color:#94a3b8 !important; }
 html:not(.dark) body #page-content#page-content button.tab-btn[class~="text-neutral-800"], html:not(.dark) body #page-content#page-content button.tab-btn[class~="text-neutral-800"]:hover { color:#0f172a !important; border-bottom-color:#3182ce !important; background:transparent !important; }
 html:not(.dark) body #page-content#page-content button.tab-btn:focus-visible { outline:2px solid #63b3ed !important; outline-offset:-2px !important; }
 
-/* Files: one card, monospace path bar, compact rows with dividers, blue folders, highlighted selection. */
 html:not(.dark) body #page-content#page-content #server-page-body div[class~="overflow-hidden"][class~="rounded-xl"]:has(table) { background:#ffffff !important; border:1px solid #e2e8f0 !important; border-radius:4px !important; box-shadow:none !important; }
 html:not(.dark) body #page-content#page-content #server-page-body div[class~="overflow-hidden"][class~="rounded-xl"]:has(table) > div[class~="py-2.5"] { background:#f8fafc !important; border-bottom:1px solid #e2e8f0 !important; padding:10px 16px !important; }
 html:not(.dark) body #page-content#page-content #server-page-body div[class~="overflow-hidden"][class~="rounded-xl"]:has(table) > div[class~="py-2.5"] :is(a,span) { font-family:"Ubuntu Mono",ui-monospace,monospace !important; font-size:13px !important; color:#64748b !important; }
@@ -692,7 +528,6 @@ html:not(.dark) body #page-content#page-content #server-page-body table:has(.fil
 html:not(.dark) body #page-content#page-content #server-page-body table:has(.file-checkbox) tr:has([data-theme-fields*='"type":"directory"']) td a > span:first-child { color:#3182ce !important; }
 html:not(.dark) body #page-content#page-content #server-page-body table:has(.file-checkbox) td:last-child { font-family:"Ubuntu Mono",ui-monospace,monospace !important; font-size:13px !important; color:#64748b !important; }
 
-/* Images / Addons (Installed / Store): same underline tabs as Settings and Analytics. */
 html:not(.dark) body #page-content#page-content div[class~="border-b"]:has(> :is(a,span)[class~="border-b-2"][class~="-mb-px"]) { display:flex !important; gap:4px !important; border:0 !important; border-bottom:1px solid #e2e8f0 !important; background:transparent !important; padding:0 !important; }
 @media(min-width:1024px) { html:not(.dark) body #page-content#page-content > div[class~="border-b"]:has(> :is(a,span)[class~="border-b-2"][class~="-mb-px"]) { width:auto !important; max-width:1376px !important; margin-left:max(32px,calc((100% - 1376px)/2)) !important; margin-right:max(32px,calc((100% - 1376px)/2)) !important; } }
 html:not(.dark) body #page-content#page-content div[class~="border-b"]:has(> :is(a,span)[class~="border-b-2"][class~="-mb-px"]) > :is(a,span)[class~="border-b-2"][class~="-mb-px"] { display:inline-flex !important; align-items:center !important; gap:6px !important; margin:0 0 -1px !important; padding:10px 16px !important; border:0 !important; border-bottom:2px solid transparent !important; border-radius:0 !important; background:transparent !important; font-size:14px !important; font-weight:500 !important; color:#64748b !important; text-decoration:none !important; transition:color .15s ease, border-color .15s ease, background-color .15s ease !important; }
@@ -700,8 +535,6 @@ html:not(.dark) body #page-content#page-content div[class~="border-b"]:has(> :is
 html:not(.dark) body #page-content#page-content div[class~="border-b"]:has(> :is(a,span)[class~="border-b-2"][class~="-mb-px"]) > :is(a,span)[class~="border-b-2"][class~="-mb-px"][class~="border-neutral-800"] { color:#0f172a !important; border-bottom-color:#3182ce !important; }
 html:not(.dark) body #page-content#page-content div[class~="border-b"]:has(> :is(a,span)[class~="border-b-2"][class~="-mb-px"]) > :is(a,span)[class~="border-b-2"][class~="-mb-px"] > span { display:inline-flex !important; align-items:center !important; min-width:20px !important; height:18px !important; padding:0 6px !important; margin:0 !important; border-radius:9px !important; background:#e2e8f0 !important; color:#1e293b !important; font-size:11px !important; justify-content:center !important; }
 
-
-/* @@SERVER-PAGES@@ Server pages (Startup, Backups, Settings, Files): one container width, single cards, no double padding. */
 @media(min-width:1024px) {
  html:not(.dark) body section#page-content { padding-left:0 !important; padding-right:0 !important; }
  html:not(.dark) body section#page-content > :is(header,div):not([class*="fixed"]) { max-width:1440px !important; width:100% !important; margin-left:auto !important; margin-right:auto !important; padding-left:32px !important; padding-right:32px !important; box-sizing:border-box !important; }
@@ -718,38 +551,32 @@ html:not(.dark) body #page-content#page-content button#createBackup { display:in
 html:not(.dark) body #page-content#page-content button#createBackup svg { width:16px !important; height:16px !important; margin:0 !important; color:#fff !important; stroke:currentColor !important; flex:none !important; }
 html:not(.dark) body #page-content#page-content button#createBackup:hover { background:#2b6cb0 !important; border-color:#2b6cb0 !important; filter:none !important; }
 html:not(.dark) body #page-content#page-content button#createBackup:active { background:#2c5282 !important; border-color:#2c5282 !important; }
-/* @@END-SERVER-PAGES@@ */
 
-/* Switches with a text label (e.g. Startup Command Permissions, Server Suspension): label sits beside the switch, text never runs under it. */
 body label:has(> input.peer[type="checkbox"]):has(> span:not(.absolute)) { display:inline-flex !important; align-items:center !important; gap:10px !important; width:auto !important; min-width:0 !important; height:auto !important; flex:none !important; }
 body label:has(> input.peer[type="checkbox"]) > span:not(.absolute) { margin:0 !important; min-width:58px; white-space:nowrap !important; line-height:20px !important; font-size:13px !important; }
 body div[class~="justify-between"]:has(> label > input.peer[type="checkbox"]) { gap:16px !important; }
 body div[class~="justify-between"]:has(> label > input.peer[type="checkbox"]) > div:first-child { flex:1 1 auto !important; min-width:0 !important; margin-bottom:0 !important; }
 
-/* Row action icons (open / edit / delete): one quiet style, same size; delete turns red on hover. */
 html:not(.dark) body #page-content#page-content td :is(a,button)[class~="p-1.5"][class~="rounded-lg"] { display:inline-flex !important; align-items:center !important; justify-content:center !important; width:32px !important; height:32px !important; min-width:32px !important; padding:0 !important; background:#ffffff !important; border:1px solid #cbd5e1 !important; border-radius:3px !important; color:#475569 !important; box-shadow:none !important; filter:none !important; transition:background-color .15s ease, border-color .15s ease, color .15s ease !important; }
 html:not(.dark) body #page-content#page-content td :is(a,button)[class~="p-1.5"][class~="rounded-lg"] svg { width:16px !important; height:16px !important; margin:0 !important; }
 html:not(.dark) body #page-content#page-content td :is(a,button)[class~="p-1.5"][class~="rounded-lg"]:hover { background:#f1f5f9 !important; border-color:#94a3b8 !important; color:#0f172a !important; filter:none !important; }
 html:not(.dark) body #page-content#page-content td button[class~="p-1.5"][class~="rounded-lg"][title="Delete"]:hover, html:not(.dark) body #page-content#page-content td button[class~="p-1.5"][class~="rounded-lg"][class*="hover:text-red"]:hover { background:#e53e3e !important; border-color:#e53e3e !important; color:#fff !important; }
-/* Bulk selection bar: same width as the table below (no extra side margins or second outline). */
+
 html:not(.dark) body #page-content#page-content #bulkToolbarContent { margin-left:0 !important; margin-right:0 !important; border:0 !important; padding:0 !important; background:transparent !important; box-shadow:none !important; }
 
-/* Login / register: the panel's auth wallpaper fills the background behind the centred form, softened by an overlay. */
 html:not(.dark) body:has(.auth-split) .auth-split { position:relative !important; isolation:isolate !important; background:transparent !important; }
 html:not(.dark) body:has(.auth-split) .auth-image { display:block !important; position:fixed !important; inset:0 !important; z-index:-1 !important; width:auto !important; height:auto !important; min-height:0 !important; flex:none !important; background-size:cover !important; background-position:center !important; background-repeat:no-repeat !important; }
 html:not(.dark) body:has(.auth-split) .auth-image::after { content:"" !important; position:absolute !important; inset:0 !important; background:linear-gradient(rgba(15,23,42,.25),rgba(15,23,42,.45)) !important; }
 html:not(.dark) body:has(.auth-split) #authPanel { position:relative !important; z-index:1 !important; }
 
-/* Search bar: no browser clear (x) button. */
 html:not(.dark) body :is(#searchInput,#mobileSearchInput)::-webkit-search-cancel-button, html:not(.dark) body :is(#searchInput,#mobileSearchInput)::-webkit-search-decoration { -webkit-appearance:none !important; appearance:none !important; display:none !important; }
-/* Page titles: same spacing as Dashboard (36px title line, 24px from subtitle to content); empty helper rows add no space. */
+
 @media(min-width:1024px) {
  html:not(.dark) body div#page-content > :first-child h1, html:not(.dark) body section#page-content > :first-child h1 { line-height:36px !important; }
  html:not(.dark) body div#page-content:not(:has(#server-page-body)) > :first-child:not([class~="px-12"]) { padding-bottom:4px !important; }
  html:not(.dark) body #page-content > div:empty, html:not(.dark) body #page-content > #toolbarSentinel, html:not(.dark) body #page-content > #bulkToolbarRow { padding-top:0 !important; padding-bottom:0 !important; min-height:0 !important; }
 }
 
-/* Audit pass: one button system (blue primary, grey secondary), Pterodactyl-style form labels, small layout fixes. */
 html:not(.dark) body #page-content#page-content button[class*="dark:bg-white"]:not(.tab-btn):not([role="switch"]):not(:disabled) { background:#3182ce !important; border:1px solid #3182ce !important; color:#fff !important; box-shadow:none !important; filter:none !important; }
 html:not(.dark) body #page-content#page-content button[class*="dark:bg-white"]:not(.tab-btn):not([role="switch"]):not(:disabled):hover { background:#2b6cb0 !important; border-color:#2b6cb0 !important; }
 html:not(.dark) body #page-content#page-content button[class*="dark:bg-white"]:not(.tab-btn):disabled { background:#3182ce !important; border-color:#3182ce !important; color:#fff !important; opacity:.45 !important; }
@@ -762,35 +589,32 @@ html:not(.dark) body #page-content#page-content div:has(> input#serverName) > di
 html:not(.dark) body #page-content#page-content div:has(> input#serverName) > div[onclick*="generateRandomName"]:hover { color:#0f172a !important; background:#f1f5f9 !important; }
 html:not(.dark) body #page-content#page-content label:not([class*="cursor-pointer"]):not([class*="inline"]):not([class*="ml-"]):not(:has(input,select,textarea,button)):not(.auth-label) { display:block; font-size:12px !important; font-weight:500 !important; text-transform:uppercase !important; letter-spacing:.05em !important; color:#52606d !important; margin-bottom:6px !important; }
 html:not(.dark) body #page-content#page-content label:not([class*="cursor-pointer"]):not([class*="inline"]):not([class*="ml-"]):not(:has(input,select,textarea,button)) :is(span,small) { text-transform:none !important; letter-spacing:0 !important; }
-/* Secondary actions (Back, Cancel, Export, ...): theme grey instead of the panel's near-black. */
+
 html:not(.dark) body #page-content#page-content :is(a,button)[class*="dark:bg-neutral-800"][class*="px-"]:not(.tab-btn):not(td *):not([class*="bg-red"]):not([class*="bg-blue"]):not(#createButton):not(#createuserBtn):not(#createNodeBtn):not(#createApiKeyBtn):not([type="submit"]) { background:#ffffff !important; border:1px solid #cbd5e1 !important; color:#1e293b !important; border-radius:3px !important; box-shadow:none !important; }
 html:not(.dark) body #page-content#page-content :is(a,button)[class*="dark:bg-neutral-800"][class*="px-"]:not(.tab-btn):not(td *):not([class*="bg-red"]):not([class*="bg-blue"]):not(#createButton):not(#createuserBtn):not(#createNodeBtn):not(#createApiKeyBtn):not([type="submit"]):hover { background:#cbd5e1 !important; border-color:#94a3b8 !important; color:#0f172a !important; }
-/* Dashboard Grid / List switch: the active view is clearly highlighted. */
+
 html:not(.dark) body #page-content#page-content button.view-toggle-btn { background:transparent !important; border-color:transparent !important; color:#64748b !important; box-shadow:none !important; filter:none !important; transition:background-color .15s ease, color .15s ease !important; }
 html:not(.dark) body #page-content#page-content button.view-toggle-btn:hover { background:#f1f5f9 !important; color:#1e293b !important; }
 html:not(.dark) body #page-content#page-content button.view-toggle-btn.active, html:not(.dark) body #page-content#page-content button.view-toggle-btn.active:hover { background:#3182ce !important; border-color:#3182ce !important; color:#ffffff !important; }
 
-/* Top bar edges line up with the search bar and page content at every width. */
 @media(min-width:1024px) {
  html:not(.dark) body #pc-sidebar2 { padding-left:max(32px,calc((100vw - 1376px)/2)) !important; padding-right:max(32px,calc((100vw - 1376px)/2)) !important; }
  html:not(.dark) body:has(#pc-sidebar) > #theme-toggle { right:calc(max(32px,(100vw - 1376px)/2) + 148px) !important; }
 }
-/* Account: two-factor authentication shown like a field (label + placeholder box level with the Language select). */
+
 html:not(.dark) body #page-content#page-content div:has(> p[data-theme-i18n="twoFactorAuth"]) > p[data-theme-i18n="twoFactorAuth"] { display:block; font-size:12px !important; font-weight:500 !important; text-transform:uppercase !important; letter-spacing:.05em !important; color:#52606d !important; margin:0 0 6px !important; }
 html:not(.dark) body #page-content#page-content div:has(> p[data-theme-i18n="twoFactorAuth"]) > p:not([data-theme-i18n]) { display:flex !important; align-items:center !important; gap:8px !important; height:40px !important; margin:0 !important; padding:0 12px !important; border:1px dashed #cbd5e1 !important; border-radius:3px !important; background:transparent !important; color:#52606d !important; font-size:13px !important; }
 html:not(.dark) body #page-content#page-content div:has(> p[data-theme-i18n="twoFactorAuth"]) > p:not([data-theme-i18n])::before { content:"" !important; width:16px !important; height:16px !important; flex:none !important; background:currentColor !important; -webkit-mask:center/16px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='9' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") !important; mask:center/16px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='9' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") !important; }
 
-/* Table row actions (View / Edit / Configure / Export): one neutral style. */
 html:not(.dark) body #page-content#page-content td :is(a,button)[class*="bg-white"]:not([class*="bg-red"]) { background:#ffffff !important; border:1px solid #cbd5e1 !important; color:#1e293b !important; box-shadow:none !important; border-radius:3px !important; }
 html:not(.dark) body #page-content#page-content td :is(a,button)[class*="bg-white"]:not([class*="bg-red"]):hover { border-color:#94a3b8 !important; }
-/* Light mode: active server tab text is dark (was white on white). */
+
 html:not(.dark) body :is(.nav-link2.active,.nav-link2[data-active="true"]), html:not(.dark) body .mobile-server-chrome .nav-link2.active { color:#1e293b !important; }
-/* Light mode sun/moon button: white button, dark slate icon. */
+
 html:not(.dark) body #theme-toggle { background:#ffffff !important; border-color:#cbd5e1 !important; }
 html:not(.dark) body #theme-toggle:hover { background:#f1f5f9 !important; border-color:#94a3b8 !important; }
 html:not(.dark) body #theme-toggle::before { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23334e68' stroke-width='1.7' stroke-linecap='round'%3E%3Cpath d='M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z'/%3E%3C/svg%3E") !important; }
 
-/* Mobile server pages: highlight the current tab, keep the status badge clear of the server name. */
 html:not(.dark) body .nav-link2[class~="text-neutral-900"]:not(.active):not([data-active="true"]) { color:#1e293b !important; background:transparent !important; border-color:transparent !important; border-bottom-color:#4299e1 !important; }
 html:not(.dark) body div:has(> h1 + [data-server-status-container]) { flex-wrap:wrap !important; row-gap:6px !important; }
 html:not(.dark) body div:has(> h1) > [data-server-status-container] { margin-left:10px !important; flex:none !important; }
@@ -798,13 +622,12 @@ html:not(.dark) body div:has(> h1) > [data-server-status-container] { margin-lef
  html:not(.dark) body main#page-content > .mobile-server-chrome ~ div:not([class*="fixed"]):not(.mobile-bottom-nav) { padding-top:16px !important; }
  html:not(.dark) body main#page-content > .mobile-server-chrome ~ div:not([class*="fixed"]):not(.mobile-bottom-nav) > :first-child { margin-top:0 !important; }
 }
-/* Edit links in lists (mobile cards too): secondary grey like View. */
+
 html:not(.dark) body #page-content#page-content :is(a[href*="/edit/"][class*="bg-blue-600"], a[href*="/edit/"] button[class*="bg-blue-600"]) { background:#ffffff !important; border:1px solid #cbd5e1 !important; color:#1e293b !important; box-shadow:none !important; }
-/* Light mode mobile bottom bar: the current section is blue, not white on white. */
+
 html:not(.dark) body .mobile-bottom-nav .mobile-nav-link:is(.active,[class*="text-white"],[class~="text-neutral-900"],[aria-current]) { color:#2b6cb0 !important; }
 html:not(.dark) body #page-content#page-content :is(a.nav-link2.active, a.nav-link2[data-active="true"]) { color:#1e293b !important; }
 
-/* Theme store: details dialog keeps its size, uses theme card colours and buttons. */
 html:not(.dark) body #themeOverlay .ts-box { max-width:760px !important; background:#ffffff !important; border:1px solid #e2e8f0 !important; border-radius:6px !important; box-shadow:0 20px 50px #0006 !important; color:#1e293b !important; }
 html:not(.dark) body #themeOverlay .ts-media { background:#f1f5f9 !important; }
 html:not(.dark) body #themeOverlay .ts-thumb { border-radius:3px !important; }
@@ -816,15 +639,26 @@ html:not(.dark) body #themeOverlay #dlgGh:hover { border-color:#94a3b8 !importan
 html:not(.dark) body #themeOverlay #dlgDesc, html:not(.dark) body #themeOverlay #dlgMeta { color:#52606d !important; }
 @media(min-width:1024px) { html:not(.dark) body #page-content #storeGrid { grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) !important; gap:16px !important; } }
 html:not(.dark) body #page-content #storeGrid > * { border-radius:4px !important; box-shadow:none !important; }
-/* Theme store image arrows: round, see-through dark buttons with a centred arrow (cards and details dialog). */
+
 html:not(.dark) body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav { width:30px !important; height:30px !important; min-width:30px !important; padding:0 !important; border:1px solid #ffffff26 !important; border-radius:999px !important; background:#1f2933b3 !important; color:#fff !important; box-shadow:0 2px 6px #0004 !important; filter:none !important; display:flex !important; align-items:center !important; justify-content:center !important; backdrop-filter:blur(4px); transition:opacity .15s ease, background-color .15s ease !important; }
 html:not(.dark) body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav:hover { background:#3182ce !important; border-color:#3182ce !important; }
 html:not(.dark) body :is(#page-content#page-content, #themeOverlay#themeOverlay) button.ts-nav svg { width:14px !important; height:14px !important; margin:0 !important; flex:none !important; }
 @media(max-width:1023px) { html:not(.dark) body main#page-content > div[class~="px-4"]:has(#storeGrid) > div[class~="px-4"] { padding-left:0 !important; padding-right:0 !important; } }
 html:not(.dark) body #page-content #storeGrid > * { background:#ffffff !important; border:1px solid #e2e8f0 !important; }
-/* Mobile admin menu: calm card hover instead of solid blue. */
+
 html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"] { background:#ffffff !important; border:1px solid #e2e8f0 !important; border-radius:4px !important; transition:background-color .15s ease, border-color .15s ease !important; }
 html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover, html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:active { background:#f8fafc !important; border-color:#94a3b8 !important; }
 html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover p:first-child { color:#0f172a !important; }
 html:not(.dark) body main div[class~="space-y-2"] > a[class*="bg-white"][class~="rounded-xl"]:hover > svg:last-child { color:#4299e1 !important; }
 @media(max-width:1023px) { html:not(.dark) body main > div[class~="px-4"]:has(#storeGrid) > div[class~="px-4"]:first-child { padding-top:0 !important; } }
+
+@media(min-width:1024px) {
+ html:not(.dark) body section#page-content > .collapsible-row > div { max-width:1440px !important; width:100% !important; margin-left:auto !important; margin-right:auto !important; padding-left:32px !important; padding-right:32px !important; box-sizing:border-box !important; }
+ html:not(.dark) body section#page-content > .collapsible-row > div > div[class~="ml-8"] { margin-left:0 !important; margin-right:0 !important; padding-left:0 !important; padding-right:0 !important; }
+}
+html:not(.dark) body #page-content tbody[class*="dark:bg-neutral-8"] { background:transparent !important; }
+
+@media(max-width:1023px) {
+ html:not(.dark) body #page-content div[class~="mt-1"][class~="items-center"]:has(> p[data-theme-text*="server.description"] + div[class~="ml-3"]) { flex-wrap:wrap !important; row-gap:4px !important; }
+ html:not(.dark) body #page-content div[class~="mt-1"][class~="items-center"]:has(> p[data-theme-text*="server.description"]) > div[class~="ml-3"] { flex:0 0 100% !important; margin-left:0 !important; }
+}
