@@ -19,7 +19,9 @@ Each directory follows the v2 package format:
 ```
 <theme-id>/
 ├── theme.json   # id, name, author, version, description, mode, css
-└── theme.css    # --theme-* variables + classic Tailwind overrides
+├── theme.css    # --theme-* variables + classic Tailwind overrides
+├── info.json    # store name, long description, updatedAt, preview images
+└── images/      # cover + gallery screenshots (first image is the cover)
 ```
 
 ## Using the store
@@ -34,10 +36,13 @@ https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/themes.json
 jsDelivr is recommended because `raw.githubusercontent.com` can serve a cached
 index for a while after a branch is updated.
 
-The store will list both themes. Installing downloads `theme.json` and
-`theme.css` from the URLs in `themes.json` and writes them into
-`frontend/public/themes/installed/<id>/`. Select the installed theme for light
-or dark mode from the active-themes form.
+The store lists both themes as image tiles. Clicking a tile opens a popup with
+the preview gallery, full description and an **Install** button plus a
+**GitHub** link to the source. Installing downloads every file listed in the
+index `files` map — `theme.json`, CSS, `info.json` and all preview images — and
+writes them into `frontend/public/themes/installed/<id>/`. Select the installed
+theme for light or dark mode from the active-themes form; the selected tile gets
+a green border and check mark.
 
 ## Adding a theme
 
@@ -46,5 +51,14 @@ or dark mode from the active-themes form.
    at your CSS file.
 3. Add `theme.css` using the `--theme-*` variables from panel v1, plus any
    `!important` Tailwind overrides you need.
-4. Add an entry to [`themes.json`](themes.json) with `files.theme.json` and
-   `files.theme.css` pointing at raw URLs on this branch.
+4. Add `info.json` with `name`, `description`, `longDescription`, `updatedAt`
+   and an `images` array. The first image is used as the tile cover.
+5. Add the referenced screenshots to `images/` (`png`, `jpg`, `webp`, `gif` or
+   `svg`).
+6. Add an entry to [`themes.json`](themes.json). Its `files` map must include
+   `theme.json`, the CSS file, `info.json`, and every image path from
+   `info.json`, pointing at jsDelivr URLs on this branch:
+
+   ```text
+   https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/<theme-id>/<file>
+   ```

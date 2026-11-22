@@ -1,0 +1,16 @@
+{
+  "name": "Pterolink Light",
+  "version": "1.0.1",
+  "author": "Manu4Dev",
+  "description": "The familiar Pterodactyl-inspired light look, packaged for panel v2.",
+  "longDescription": "Pterolink Light brings the Pterodactyl look you already know to Airlink panel v2. It uses the original light stylesheet and screenshots from Manu4Dev's Pterolink theme, with the horizontal top bar, underline tabs and slate colours kept intact. Install it and select it for light mode to give your panel a familiar home.",
+  "images": [
+    "images/01-hero.png",
+    "images/02-dark-light.png",
+    "images/03-servers.png",
+    "images/04-login.png",
+    "images/05-mobile.png",
+    "images/06-admin.png"
+  ],
+  "updatedAt": "2026-11-22"
+}

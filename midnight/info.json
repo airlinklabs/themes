@@ -1,0 +1,13 @@
+{
+  "name": "Midnight",
+  "version": "1.0.0",
+  "author": "Airlink Community",
+  "description": "A deep blue community theme with slate accents.",
+  "longDescription": "Midnight wraps the classic Airlink panel in a calm deep-navy palette with bright blue accents. It keeps the familiar sidebar, cards and console layout from panel v1, making it a comfortable dark theme for long server-management sessions. Use it as the dark theme in the v2 appearance settings.",
+  "images": [
+    "images/cover.svg",
+    "images/servers.svg",
+    "images/login.svg"
+  ],
+  "updatedAt": "2026-11-22"
+}

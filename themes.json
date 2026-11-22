@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-22",
   "source": "https://github.com/airlinklabs/themes/tree/panel-v2",
-  "note": "Community index for Airlink panel v2. Point the admin theme store at the raw URL of this file.",
+  "note": "Community index for Airlink panel v2. Point the admin theme store at this jsDelivr URL; each entry lists theme.json, theme.css, info.json and every preview image.",
   "themes": [
     {
       "id": "pterolink-light",
@@ -12,8 +12,15 @@
       "mode": "light",
       "sourceUrl": "https://github.com/airlinklabs/themes/tree/panel-v2/pterolink-light",
       "files": {
-        "theme.json": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/pterolink-light/theme.json",
-        "theme.css": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/pterolink/light.css"
+        "theme.json": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/theme.json",
+        "theme.css": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink/light.css",
+        "info.json": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/info.json",
+        "images/01-hero.png": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/images/01-hero.png",
+        "images/02-dark-light.png": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/images/02-dark-light.png",
+        "images/03-servers.png": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/images/03-servers.png",
+        "images/04-login.png": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/images/04-login.png",
+        "images/05-mobile.png": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/images/05-mobile.png",
+        "images/06-admin.png": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/pterolink-light/images/06-admin.png"
       }
     },
     {
@@ -25,8 +32,12 @@
       "mode": "dark",
       "sourceUrl": "https://github.com/airlinklabs/themes/tree/panel-v2/midnight",
       "files": {
-        "theme.json": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/midnight/theme.json",
-        "theme.css": "https://raw.githubusercontent.com/airlinklabs/themes/panel-v2/midnight/theme.css"
+        "theme.json": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/midnight/theme.json",
+        "theme.css": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/midnight/theme.css",
+        "info.json": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/midnight/info.json",
+        "images/cover.svg": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/midnight/images/cover.svg",
+        "images/servers.svg": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/midnight/images/servers.svg",
+        "images/login.svg": "https://cdn.jsdelivr.net/gh/airlinklabs/themes@panel-v2/midnight/images/login.svg"
       }
     }
   ]
